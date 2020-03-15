@@ -16,7 +16,7 @@ def save()
   )
   VALUES
   (
-    £1
+    $1
   )
   RETURNING id"
   values = [@name]

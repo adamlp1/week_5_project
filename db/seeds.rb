@@ -13,6 +13,10 @@ manufacturer2 = Manufacturer.new({
   'name' => 'Element'
 })
 
+
+manufacturer1.save
+manufacturer2.save
+
 product1 = Product.new({
   'name' => 'Rail Wax (x3)',
   'description' => '3 pack of Rail Wax cubes.',
