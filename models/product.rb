@@ -64,6 +64,21 @@ class Product
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM products;"
+    products = SqlRunner.run(sql)
+    result = products.map { |product| Product.new(product) }
+    return result
+  end
+
+  def self.find(id)
+    sql = "SELECT * from products WHERE id = $1"
+    values = [id]
+    product = SqlRunner.run(sql, values)
+    result = Product.new(product.first)
+    return result
+  end 
+
 
 
 
