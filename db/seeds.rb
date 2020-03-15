@@ -1,6 +1,17 @@
 require_relative('../models/product.rb')
+require_relative('../models/manufacturer.rb')
+
 
 Product.delete_all
+Manufacturer.delete_all
+
+manufacturer1 = Manufacturer.new({
+  'name' => 'Etnies'
+})
+
+manufacturer2 = Manufacturer.new({
+  'name' => 'Element'
+})
 
 product1 = Product.new({
   'name' => 'Rail Wax (x3)',

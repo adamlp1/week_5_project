@@ -1,4 +1,4 @@
-require_relative('../db/sql_runner')
+require_relative('../db/sql_runner.rb')
 
 class Product
 
@@ -77,7 +77,7 @@ class Product
     product = SqlRunner.run(sql, values)
     result = Product.new(product.first)
     return result
-  end 
+  end
 
 
 
