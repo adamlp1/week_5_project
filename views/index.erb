@@ -1,0 +1,14 @@
+<h1>Inventory</h1>
+
+<div id="inventory-wrapper">
+  <% @products.each do |product| %>
+
+  <div class="product">
+    <h3><a href="/inventory/<%= product.id %>"><%= product.name %></a></h3>
+    <p>Desc: <%= product.description %></p>
+    <p>Buy Cost: <%= product.buy_cost %></p>
+    <p>Sell Price: <%= product.sell_price %></p>
+</div>
+<% end %>
+
+</div>
