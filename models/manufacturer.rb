@@ -25,6 +25,20 @@ def save()
   @id = id.to_i
 end
 
+def update()
+  sql = "UPDATE manufacturers
+  SET
+  (
+    name
+  ) =
+  (
+    $1
+  )
+  WHERE id = $2"
+  values = [@name]
+  SqlRunner.run(sql, values)
+end
+
 def self.delete_all()
   sql = "DELETE FROM manufacturers;"
   SqlRunner.run(sql)
@@ -44,6 +58,8 @@ def self.find(id)
   result = Manufacturer.new(manufacturer.first)
   return result
 end
+
+def update
 
 
 

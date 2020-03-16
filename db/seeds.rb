@@ -33,6 +33,16 @@ product2 = Product.new({
   'sell_price' => 7
 })
 
+product2 = Product.new({
+  'name' => '4 Board Bolts (x4)',
+  'description' => '4 pack of Board Bolts.',
+  'stock' => 15,
+  'buy_cost' => 3,
+  'sell_price' => 7
+})
+
+
+
 
 product1.save
 product2.save
