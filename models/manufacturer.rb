@@ -59,19 +59,6 @@ def self.find(id)
   return result
 end
 
-def update
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
