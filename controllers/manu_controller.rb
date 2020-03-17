@@ -7,3 +7,4 @@ get '/manufacturers' do
   @manufacturers = Manufacturer.all
   erb(:index)
 end
+
