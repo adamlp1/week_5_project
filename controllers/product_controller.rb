@@ -24,6 +24,11 @@ get '/products/:id' do
   erb(:"products/show")
 end
 
+get '/products/:id/edit' do 
+  @product = Product.find(params['id'])
+  erb(:"products/edit")
+end
+
 
 
 # post '/products/:id/delete' do
