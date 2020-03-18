@@ -33,7 +33,7 @@ end
 post '/products/:id' do 
   product = Product.new(params)
   product.update
-  redirect to "/products/#{params['id']}"
+  redirect to "products"
 end 
 
 post '/products/:id/delete' do
