@@ -19,12 +19,6 @@ post '/products' do
   redirect to ("/products")
 end
 
-
-get '/products/:id' do 
-  @product = Product.find(params['id'])
-  erb(:"products/show")
-end
-
 get '/products/:id/edit' do 
   @product = Product.find(params['id'])
   erb(:"products/edit")
@@ -41,12 +35,3 @@ post '/products/:id/delete' do
   redirect :"products"
 end
 
-
-
-
-
-# post '/products/:id/delete' do
-#   product = Product.find(params['id'])
-#   product.delete 
-#   redirect to '/products' 
-# end 

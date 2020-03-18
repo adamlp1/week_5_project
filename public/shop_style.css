@@ -1,7 +1,11 @@
 body {
   padding: 30px;
-  color: #ccad00;
+  color: #0d0000;
   font-family: 'Roboto', sans-serif;
+  background-image: url("/adam-peep.png");
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+  background-position: 250px 5px
 }
 
 a {
