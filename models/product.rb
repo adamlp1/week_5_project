@@ -52,10 +52,10 @@ class Product
     SqlRunner.run(sql, values)
   end
 
-  def delete()
+  def self.delete(id)
     sql = "DELETE FROM products
     WHERE id = $1"
-    values = [@id]
+    values = [id]
     SqlRunner.run(sql, values)
   end
 
@@ -65,7 +65,8 @@ class Product
   end
 
   def self.all()
-    sql = "SELECT * FROM products;"
+    sql = "SELECT * FROM products
+            ORDER BY name"
     products = SqlRunner.run(sql)
     result = products.map { |product| Product.new(product) }
     return result

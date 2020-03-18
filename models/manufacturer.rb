@@ -45,9 +45,10 @@ def self.delete_all()
 end
 
 def self.all()
-  sql = "SELECT * FROM manufacturers"
+  sql = "SELECT * FROM manufacturers
+          ORDER BY name"
   manufacturers = SqlRunner.run(sql)
-  reuslt = manufacturers.map { |manufacturer| Manufacturer.new(manufacturer) }
+  result = manufacturers.map { |manufacturer| Manufacturer.new(manufacturer) }
   return result
 end
 

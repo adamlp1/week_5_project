@@ -1,14 +1,22 @@
 <h1>Products</h1>
 
+<a href='/products/new'>Add Product</a>
+
 <div id="product-wrapper">
   <% @products.each do |product| %>
 
   <div class="product">
     <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
-    <p2>Desc: <%= product.description %></p2>
-    <p2>Buy Cost: <%= product.buy_cost %></p2>
-    <p2>Sell Price: <%= product.sell_price %></p2>
+    <p>Desc: <%= product.description %></p>
+    <p>Stock: <%= product.stock %></p>
+    <p>Buy Cost: <%= product.buy_cost %></p>
+    <p>Sell Price: <%= product.sell_price %></p>
+    <p><form method="POST" action="/products/<%= product.id %>/delete">
+    <input type="submit" value="Delete"/>
+    <hr />
 </div>
 <% end %>
+
+
 
 </div>
