@@ -1,11 +1,20 @@
-<h1>Manufacturers</h1>
+<h2>Manufacturers</h2>
+
+<a href='/manufacturers/new'>Add Manufacturer</a>
+
 
 <div id="manu-wrapper">
   <% @manufacturers.each do |manufacturer| %>
 
   <div class="manufacturer">
     <h3><%= manufacturer.name %></h3>
+
+    <p><form method="GET" action="/manufacturers/<%= manufacturer.id %>/edit">
+    <input type="submit" value="Edit"/> </form>
+    <p><form method="POST" action="/manufacturers/<%= manufacturer.id %>/delete">
+    <input type="submit" value="Delete"/> </form>
 </div>
+
 <% end %>
 
 </div>

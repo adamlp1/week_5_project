@@ -1,0 +1,12 @@
+<h2>Edit Manufacturer</h2>
+<form method="POST" action="/manufacturers/<%= @manufacturer.id %>">
+  <div class="form-wrapper">
+
+  <div class="form-el">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @manufacturer.name %>" REQUIRED/>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Confirm Edit"/>
+    </div>
