@@ -1,0 +1,35 @@
+<h2>Edit <%= @product.name %></h2>
+<form method="POST" action="/products/<%= @product.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name"
+    </div>
+
+    <div class="form-el"
+      <label for="description">Desc:</label>
+      <input type="text" name="description" id="description"
+    </div>
+
+    <div class="form-el">
+      <label for="stock">Stock:</label>
+      <input type="number" name="stock" id="stock"
+    </div>
+
+    <div class="form-el">
+      <label for="buy_cost">Buy Cost:</label>
+      <input type="number" name="buy_cost" id="buy_cost"
+    </div>
+
+    <div class="form-el">
+      <label for="sell_price">Sell Price:</label>
+      <input type="number" name="sell_price" id="sell_price"
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Confirm Edit"/>
+    </div>
+
+  </div>
+</form>

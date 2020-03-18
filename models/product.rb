@@ -48,7 +48,7 @@ class Product
       $1, $2, $3, $4, $5
     )
     WHERE id = $6"
-    values = [@name, @description, @stock, @buy_cost, @sell_price]
+    values = [@name, @description, @stock, @buy_cost, @sell_price, @id]
     SqlRunner.run(sql, values)
   end
 

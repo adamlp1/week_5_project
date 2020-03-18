@@ -29,6 +29,12 @@ get '/products/:id/edit' do
   erb(:"products/edit")
 end
 
+post '/products/:id' do 
+  product = Product.new(params)
+  product.update
+  redirect to "/products/#{params['id']}"
+end 
+
 
 
 # post '/products/:id/delete' do
